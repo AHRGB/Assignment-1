@@ -20,6 +20,7 @@
 #include"LinearRegressor.h"
 #include"PolyNomialRegressor.h"
 #include"MultipleRegressor.h"
+#include "Interpolation.h"
 using namespace std;
 
 /*
@@ -93,16 +94,28 @@ int main(int argc, char** argv) {
 //     R3.fit();
     
    
+//    
+//vector< vector< double > > X4 =
+// {{0,1,2,3,4,5,6,7,8,9},
+//  {7,2,9,1,0,8,4,5,6,3}};
+// vector<double> Y4={19.9399404092838,13.6664498304443,40.969249877629,22.1219776775772,
+//                    24.9504781797253,53.1695287072467,
+//                    51.4732278714773,59.4182671427783,
+//                    68.4526706099805,62.8428987709416 };
+//    MultipleRegressor R4(2,X4,Y4);
+//    R4.fit();
     
-     vector< vector< double > > X4 =
- {{0,1,2,3,4,5,6,7,8,9},
-  {7,2,9,1,0,8,4,5,6,3}};
- vector<double> Y4={19.9399404092838,13.6664498304443,40.969249877629,22.1219776775772,
-                    24.9504781797253,53.1695287072467,
-                    51.4732278714773,59.4182671427783,
-                    68.4526706099805,62.8428987709416 };
-    MultipleRegressor R4(2,X4,Y4);
-    R4.fit();
+ 
+    vector<double> X5 = {3,4.5,7,9};
+    vector<double> Y5 ={2.5,1,2.5,0.5};
+    
+    Interpolation IN(X5,Y5);
+    
+    IN.fit_newton(2);
+    
+    IN.fit_spline(2);
+
+   
 
    return 0;
 }

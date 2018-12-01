@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/Gaussian.o \
+	${OBJECTDIR}/Interpolation.o \
 	${OBJECTDIR}/LinearRegressor.o \
 	${OBJECTDIR}/MultipleRegressor.o \
 	${OBJECTDIR}/PolyNomialRegressor.o \
@@ -70,6 +71,11 @@ ${OBJECTDIR}/Gaussian.o: Gaussian.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Gaussian.o Gaussian.cpp
+
+${OBJECTDIR}/Interpolation.o: Interpolation.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Interpolation.o Interpolation.cpp
 
 ${OBJECTDIR}/LinearRegressor.o: LinearRegressor.cpp
 	${MKDIR} -p ${OBJECTDIR}
