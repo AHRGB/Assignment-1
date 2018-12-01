@@ -37,6 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Gaussian.o \
 	${OBJECTDIR}/LinearRegressor.o \
+	${OBJECTDIR}/MultipleRegressor.o \
+	${OBJECTDIR}/PolyNomialRegressor.o \
 	${OBJECTDIR}/main.o
 
 
@@ -73,6 +75,16 @@ ${OBJECTDIR}/LinearRegressor.o: LinearRegressor.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LinearRegressor.o LinearRegressor.cpp
+
+${OBJECTDIR}/MultipleRegressor.o: MultipleRegressor.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MultipleRegressor.o MultipleRegressor.cpp
+
+${OBJECTDIR}/PolyNomialRegressor.o: PolyNomialRegressor.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/PolyNomialRegressor.o PolyNomialRegressor.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
