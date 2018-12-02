@@ -116,7 +116,7 @@ void Interpolation::fit_newton(int n ){
           
           Y_Interpolated[i] = Predict_newton(X_Interpolated[i]);
           
-          cout<<"X = "<<X_Interpolated[i]<<"  Y = "<<Y_Interpolated[i]<<"\n";
+          cout<<X_Interpolated[i]<<","<<Y_Interpolated[i]<<"\n";
           
           
       }
@@ -250,7 +250,7 @@ void Interpolation::fit_spline(int n ){
           
           Y_Interpolated[i] = Predict_spline(X_Interpolated[i]);
           
-          cout<<"X = "<<X_Interpolated[i]<<"  Y = "<<Y_Interpolated[i]<<"\n";
+          cout<<X_Interpolated[i]<<","<<Y_Interpolated[i]<<"\n";
           
           
       }

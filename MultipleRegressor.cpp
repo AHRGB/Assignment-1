@@ -110,7 +110,6 @@ void MultipleRegressor::fit(){
              sum=0;
            for (int l=0;l<n;l++)
            {
-               cout <<" i = "<<i<<"\n";
                sum = sum  + X[i-1][l]* X[j-1][l];
             }
             
@@ -141,12 +140,14 @@ void MultipleRegressor::fit(){
     Coeffs = g.scaled_partial_pivoting();
     
     
-    cout<<" coeffecients are : \n ";
+    cout<<" equation is : \n ";
     
     for (int i=0;i<=order;i++)
     {
-        cout<<Coeffs[i]<<"\n";
+        cout<<Coeffs[i]<< " X"<<i <<" + ";
     }
+    
+    cout<<"\n";
          
 
  

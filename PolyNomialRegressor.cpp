@@ -98,12 +98,13 @@ void PolyNomialRegressor::fit(){
     Coeffs = g.scaled_partial_pivoting();
     
     
-    cout<<" coeffecients are : \n ";
+    cout<<" equation is   : \n ";
     
     for (int i=0;i<=order;i++)
     {
-        cout<<Coeffs[i]<<"\n";
+        cout<<Coeffs[i]<<" X^"<<i<<" + ";
     }
     
+    cout<<"\n";
 
 }
